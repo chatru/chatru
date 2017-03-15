@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam:300|Lato|Raleway:300');
+
+$ghost-white: #fdfdfe;
+$heather: #a7b6c5;
+$spindle: #b1c1d0;
+$pattens-blue: #dee3e5;
+$bali-hai: #8c949d;
+$dodger-blue: #128af1;
+
+body {
+    margin: 0;
+}
+
+.app-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
