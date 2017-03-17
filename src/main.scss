@@ -15,10 +15,34 @@ body {
     flex-flow: row nowrap;
 }
 
+.chat {
+    height: 100vh;
+    overflow-y: auto;
+    width: 100%;
+    .title {
+        align-items: center;
+        background-color: whitesmoke;
+        border-bottom: $border;
+        display: flex;
+        flex-flow: row nowrap;
+        height: 3rem;
+        justify-content: space-between;
+        padding: 0 1rem;
+        .icons {
+            color: gray;
+        }
+        .text {
+            font-family: kalam, cursive;
+        }
+    }
+}
+
 .connections {
     border-right: $border;
     cursor: pointer;
     font-family: raleway, sans-serif;
+    height: 100vh;
+    overflow-y: auto;
     width: 20em;
     .type {
         .item {
@@ -77,12 +101,14 @@ body {
             }
         }
         .label {
+            align-items: center;
             background-color: whitesmoke;
             border-bottom: $border;
             display: flex;
             flex-flow: row nowrap;
+            height: 3rem;
             justify-content: space-between;
-            padding: 1rem;
+            padding: 0 1rem;
             .icons {
                 color: gray;
             }

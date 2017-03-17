@@ -12,6 +12,11 @@ export interface IState {
     messages: Array<IMessage>
 }
 
+export const state: IState = {
+    title: 'पोल्ruser',
+    messages: []
+}
+
 export const getters = {
     title: (state: IState) => state.title,
     messages: (state: IState) => state.messages

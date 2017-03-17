@@ -1,7 +1,7 @@
 <template>
     <div class="app-wrapper">
         <connection-list></connection-list>
-        <div class="chat-wrapper"></div>
+        <chat></chat>
         <div class="details-wrapper"></div>
     </div>
 </template>
@@ -10,10 +10,12 @@
     import Vue from 'vue'
     import Component from 'vue-class-component'
 
+    import Chat from './Chat.vue'
     import Connections from './Connections.vue'
 
     @Component({
         components: {
+            'chat': Chat,
             'connection-list': Connections
         }
     })
