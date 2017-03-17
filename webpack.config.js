@@ -1,4 +1,5 @@
 const CompressionPlugin = require('compression-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -64,6 +65,9 @@ module.exports = {
         ]
     },
     plugins: [
+        new CopyWebpackPlugin([
+            { from: 'node_modules/monaco-editor/min/vs', to: 'vs', }
+        ]),
         new ExtractTextPlugin('style.css'),
         new HtmlWebpackPlugin({
             template: 'src/index.html'

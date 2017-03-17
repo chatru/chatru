@@ -14,7 +14,7 @@
             </div>
             <div class="content" v-if="friend.lastMessage">
                 <div class="text">{{friend.lastMessage.text}}</div>
-                <div class="time">{{friend.lastMessage.time.toString()}}</div>
+                <div class="time">{{friend.lastMessage.time.toLocaleString()}}</div>
             </div>
             <div class="empty-content" v-else>No Messages</div>
         </div>
