@@ -1,6 +1,6 @@
 <template>
     <div class="app-wrapper">
-        <div class="messages-wrapper"></div>
+        <connection-list></connection-list>
         <div class="chat-wrapper"></div>
         <div class="details-wrapper"></div>
     </div>
@@ -10,7 +10,13 @@
     import Vue from 'vue'
     import Component from 'vue-class-component'
 
-    @Component({})
-    export default class App extends Vue { }
+    import Connections from './Connections.vue'
+
+    @Component({
+        components: {
+            'connection-list': Connections
+        }
+    })
+    export default class App extends Vue {     }
 
 </script>

@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Kalam:300|Lato|Raleway:300');
-
+@import url('https://fonts.googleapis.com/css?family=Kalam:300|Lato:300|Raleway:300');
 $ghost-white: #fdfdfe;
 $heather: #a7b6c5;
 $spindle: #b1c1d0;
 $pattens-blue: #dee3e5;
 $bali-hai: #8c949d;
 $dodger-blue: #128af1;
-
+$border: 1px solid $pattens-blue;
 body {
     margin: 0;
 }
@@ -14,4 +13,87 @@ body {
 .app-wrapper {
     display: flex;
     flex-flow: row nowrap;
+}
+
+.connections {
+    border-right: $border;
+    cursor: pointer;
+    font-family: raleway, sans-serif;
+    width: 20em;
+    .type {
+        .item {
+            border-bottom: $border;
+            display: flex;
+            flex-flow: column nowrap;
+            height: 6rem;
+            padding: 1rem;
+            .content {
+                display: flex;
+                flex-flow: column nowrap;
+                font-family: lato, sans-serif;
+                justify-content: space-between;
+                height: 100%;
+                margin-top: 8px;
+                .text {
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    max-height: 40px;
+                    overflow: hidden;
+                }
+                .time {
+                    align-self: flex-end;
+                    font-size: smaller;
+                }
+            }
+            .empty-content {
+                font-style: italic;
+                margin-top: 8px;
+            }
+            .title {
+                align-content: center;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                .alert {
+                    background-color: tomato;
+                    border-radius: 5px;
+                    color: $ghost-white;
+                    font-family: Courier New, Courier, monospace;
+                    font-size: smaller;
+                    padding: 2px 5px;
+                }
+                .name {
+                    font-family: kalam, sans-serif;
+                    text-transform: capitalize;
+                }
+            }
+            &:hover {
+                background-color: $ghost-white;
+            }
+            &.activated {
+                background-color: $dodger-blue;
+                color: $ghost-white;
+            }
+        }
+        .label {
+            background-color: whitesmoke;
+            border-bottom: $border;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            padding: 1rem;
+            .icons {
+                color: gray;
+            }
+            .text {
+                color: darkslategray;
+                font-weight: bolder;
+            }
+        }
+        .new {
+            border-bottom: $border;
+            padding: 1rem;
+        }
+    }
 }
