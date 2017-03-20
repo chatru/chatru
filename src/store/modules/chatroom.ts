@@ -3,8 +3,9 @@ import * as types from '../mutation-types'
 export interface IMessage {
     author: string
     id: string
+    me?: boolean
     text: string
-    time: string
+    time: Date
 }
 
 export interface IState {
@@ -13,8 +14,15 @@ export interface IState {
 }
 
 export const state: IState = {
-    title: 'पोल्ruser',
-    messages: []
+    title: 'polorganization ltd.',
+    messages: [
+        { author: 'पोल्ruser', id: '0', me: true, text: 'i hate you and refuse to help you!', time: new Date('2017-02-18T08:05:36.100') },
+        { author: 'shiक्षु', id: '1', me: false, text: 'why?', time: new Date('2017-02-18T08:05:39.204') },
+        { author: 'पोल्ruser', id: '2', me: true, text: 'coz you are not khethavathu.', time: new Date('2017-02-18T08:06:00.150') },
+        { author: 'shiक्षु', id: '3', me: false, text: 'why do you hate me so?', time: new Date('2017-02-18T08:05:49.204') },
+        { author: 'पोल्ruser', id: '4', me: true, text: 'okayru', time: new Date('2017-02-18T08:06:00.150') },
+        { author: 'shiक्षु', id: '5', me: false, text: 'help! help! you are not helping!', time: new Date('2017-02-18T08:05:36.100') },
+    ]
 }
 
 export const getters = {
@@ -27,27 +35,4 @@ export const actions = {
 }
 
 export const mutations = {
-    /*[types.ADD_FIELD](state) {
-        state.fields.push({ indent: 0, name: '', type: 'String' })
-    },
-
-    [types.CHANGE_DESCRIPTION](state, { description }) {
-        state.description = description
-    },
-
-    [types.CHANGE_ID](state) {
-        state.id = randomString()
-    },
-
-    [types.CHANGE_NAME](state, { name }) {
-        state.name = name
-    },
-
-    [types.DELETE_FIELD](state, { index }) {
-        state.fields.splice(index, 1)
-    },
-
-    [types.UPDATE_FIELD](state, { index, field }) {
-        Object.assign(state.fields[index], field)
-    }*/
 }

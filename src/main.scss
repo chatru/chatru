@@ -26,6 +26,35 @@ body {
         color: darkslategray;
     }
     .messages {
+        color: darkslategray;
+        margin-top: 3rem;
+        height: 100%;
+        .message {
+            border-bottom: $border;
+            display: flex;
+            margin: 1rem 2rem;
+            padding: 1rem 0;
+            .wrapper {
+                display: inline-block;
+                .footer {
+                    font-size: smaller;
+                    display: flex;
+                    justify-content: flex-end;
+                    .author {
+                        margin: 0 1rem;
+                    }
+                }
+                .text {
+                    background-color: whitesmoke;
+                    border-radius: 2px;
+                    display: inline-block;
+                    padding: 5px 1rem;
+                }
+            }
+            &.mine{
+                justify-content: flex-end;
+            }
+        }
     }
     .title {
         align-items: center;
@@ -41,7 +70,10 @@ body {
             color: gray;
         }
         .text {
-            font-family: kalam, cursive;
+            color: darkslategray;
+            font-family: raleway, sans-serif;
+            font-size: larger;
+            font-variant: small-caps;
         }
     }
 }
@@ -107,6 +139,12 @@ body {
             &.activated {
                 background-color: $dodger-blue;
                 color: $ghost-white;
+                .title {
+                    .alert {
+                        background-color: $ghost-white;
+                        color: tomato;
+                    }
+                }
             }
         }
         .label {

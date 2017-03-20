@@ -7,7 +7,15 @@
             </div>
         </div>
         <div class="messages">
-            <div class="message" v-for="message in messages"></div>
+            <div :class="{ mine: message.me }" class="message" v-for="message in messages">
+                <div class="wrapper">
+                    <div class="text">{{message.text}}</div>
+                    <div class="footer">
+                        <div class="author">{{message.author}}</div>
+                        <div class="time">{{message.time.toLocaleString()}}</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="input">
             <monaco-editor code="" height="100" language="markdown" :options="options" srcPath="" theme="vs"></monaco-editor>
@@ -25,7 +33,7 @@
         components: {
             'monaco-editor': MonacoEditor
         },
-        computed: { ...mapGetters(['title', 'messages']) }
+        computed: { ...mapGetters(['messages', 'title']) }
     })
     export default class Chat extends Vue {
         options = {
