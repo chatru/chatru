@@ -206,6 +206,7 @@ body {
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-start;
+        text-align: center;
         .time {
             border-bottom: $border;
             font-family: lato, sans-serif;
@@ -214,10 +215,20 @@ body {
             width: 100%;
         }
         .stats {
+            align-items: center;
             border-bottom: $border;
+            display: flex;
+            justify-content: space-between;
             margin: 1rem;
             padding-bottom: 1rem;
             width: 100%;
+            .messages {
+                border-left: $border;
+                width: 50%;
+            }
+            .participants {
+                width: 50%;
+            }
         }
         .polugin-figure {
             align-content: center;
