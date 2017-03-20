@@ -8,9 +8,17 @@ export interface IMessage {
     time: Date
 }
 
+export interface ISession {
+    end: Date
+    messages: number
+    participants: number
+    start: Date
+}
+
 export interface IState {
     title: string
     messages: Array<IMessage>
+    session: ISession
 }
 
 export const state: IState = {
@@ -22,12 +30,14 @@ export const state: IState = {
         { author: 'shiक्षु', id: '3', me: false, text: 'why do you hate me so?', time: new Date('2017-02-18T08:05:49.204') },
         { author: 'पोल्ruser', id: '4', me: true, text: 'okayru', time: new Date('2017-02-18T08:06:00.150') },
         { author: 'shiक्षु', id: '5', me: false, text: 'help! help! you are not helping!', time: new Date('2017-02-18T08:05:36.100') },
-    ]
+    ],
+    session: { end: new Date('2017-02-18T08:05:36.100'), messages: 6, participants: 2, start: new Date('2017-02-18T08:05:36.100') }
 }
 
 export const getters = {
     title: (state: IState) => state.title,
-    messages: (state: IState) => state.messages
+    messages: (state: IState) => state.messages,
+    session: (state: IState) => state.session
 }
 
 // effects

@@ -2,7 +2,7 @@
     <div class="app-wrapper">
         <connection-list></connection-list>
         <chat></chat>
-        <div class="details-wrapper"></div>
+        <right-panel></right-panel>
     </div>
 </template>
 
@@ -12,11 +12,13 @@
 
     import Chat from './Chat.vue'
     import Connections from './Connections.vue'
+    import RightPane from './RightPane.vue'
 
     @Component({
         components: {
             'chat': Chat,
-            'connection-list': Connections
+            'connection-list': Connections,
+            'right-panel': RightPane
         }
     })
     export default class App extends Vue {     }
