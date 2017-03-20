@@ -22,26 +22,45 @@ body {
     justify-content: space-between;
     max-height: 100vh;
     width: 100%;
-    .input {
-        color: darkslategray;
-    }
     .messages {
         color: darkslategray;
-        margin-top: 3rem;
         height: 100%;
+        overflow-y: auto;
+        .input {
+            color: darkslategray;
+            margin-bottom: 2rem;
+            padding: 0 2rem;
+            .text-input {
+                border: $border;
+                border-radius: 5px;
+                min-height: 1.2rem;
+                padding: 5px 1rem;
+                &:focus {
+                    border-color: $dodger-blue;
+                    outline: none;
+                }
+            }
+        }
         .message {
-            border-bottom: $border;
+            border-top: $border;
             display: flex;
-            margin: 1rem 2rem;
-            padding: 1rem 0;
+            margin: 0 2rem;
+            padding: 2rem 1rem;
             .wrapper {
                 display: inline-block;
                 .footer {
-                    font-size: smaller;
+                    align-items: baseline;
                     display: flex;
+                    font-size: smaller;
                     justify-content: flex-end;
                     .author {
+                        font-variant: small-caps;
+                        font-family: kalam, cursive;
                         margin: 0 1rem;
+                        text-transform: capitalize;
+                    }
+                    .time {
+                        font-family: lato, sans-serif;
                     }
                 }
                 .text {
@@ -51,8 +70,13 @@ body {
                     padding: 5px 1rem;
                 }
             }
-            &.mine{
+            &.mine {
+                background-color: #fefdfd;
                 justify-content: flex-end;
+            }
+            &:first-of-type {
+                border-top: 0;
+                margin-top: 0;
             }
         }
     }
@@ -130,6 +154,7 @@ body {
                 }
                 .name {
                     font-family: kalam, sans-serif;
+                    font-variant: small-caps;
                     text-transform: capitalize;
                 }
             }

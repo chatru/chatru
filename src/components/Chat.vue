@@ -16,9 +16,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="input">
-            <monaco-editor code="" height="100" language="markdown" :options="options" srcPath="" theme="vs"></monaco-editor>
+            <div class="input">
+                <div contenteditable class="text-input"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -27,19 +27,14 @@
     import Vue from 'vue'
     import Component from 'vue-class-component'
     import { mapMutations, mapGetters } from 'vuex'
-    import MonacoEditor from 'vue-monaco-editor'
 
     @Component({
-        components: {
-            'monaco-editor': MonacoEditor
-        },
         computed: { ...mapGetters(['messages', 'title']) }
     })
     export default class Chat extends Vue {
         options = {
             lineNumbers: false,
             glyphMargin: false
-
         }
     }
 
